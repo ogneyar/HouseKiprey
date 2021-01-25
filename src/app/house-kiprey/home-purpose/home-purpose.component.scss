@@ -1,0 +1,25 @@
+.purpose{
+    // background: rgb(248, 247, 255);
+    .purpose-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        min-height: 200px;
+        padding: 20px 10px;
+
+        .purpose-box-head {
+            h4 {
+                padding: 10px;
+                font-size: 1.5rem;
+                text-align: center;
+            }
+        }
+        
+        .purpose-box-list {
+            font-size: 1.2rem;
+        }
+        
+    }
+}

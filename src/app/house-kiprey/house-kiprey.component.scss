@@ -1,0 +1,13 @@
+
+// $main-color: rgb(62, 107, 167); 
+// $h: 400px;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    min-height: calc(100vh - 350px);
+    background: rgb(221, 228, 238);
+}

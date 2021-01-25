@@ -1,0 +1,105 @@
+$base-font-size: 16px;
+$width1: 100px;
+$width2: 2rem;
+@function rem-to-px($size) {
+    $parseInted: $size / ($size * 0 + 1);
+    $value: $parseInted * $base-font-size;
+    @return round($value);
+}
+.container-example {
+    width: $width1 + rem-to-px($width2); // -> 132px
+}
+
+
+$color-blue: rgb(62, 107, 167); 
+$color-ligth-blue :rgb(178, 198, 218);
+$border: 2px;
+$height: 150px - $border; // 150px - 2px border
+$margin-side: 20px;
+
+.header {
+    margin: 0;
+    display: flex;
+    position: relative;
+    width: 100%;
+    // height: 200px;
+    height: $height;
+    background: $color-ligth-blue;
+    
+
+    .header-box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: $height;
+        border-bottom: $border solid $color-blue;
+        background: $color-ligth-blue;
+
+        display: flex;
+        // flex-direction: row;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        // display: none;
+        // opacity: 0.5;
+        
+        
+        .box {
+            display: flex;
+            // flex-direction: column;
+            // justify-content: center;
+            // align-items: center;
+            // background: blue;
+            width: 100%;
+            // margin: auto;
+            margin: 10px 0;
+            div {
+                // flex-grow: 1;
+                margin: auto;
+                // flex: 1 1 auto;
+                // text-align: center;
+            }
+            .header-box-left {
+                margin-left: $margin-side;
+                
+            }
+            .header-box-center {
+                h1 {
+                    color: $color-blue;
+                }
+            }
+            .header-box-right {
+                margin-right: $margin-side;
+            }
+        }
+        .header-box-down {
+            // display: none;
+            // margin: auto;
+            margin: 10px 0;
+        }
+        .box .header-box-left, 
+        .box .header-box-center, 
+        .box .header-box-right,
+        .header-box-down {
+            border: 1px dashed grey;
+            border-radius: 5px;
+            padding: 0 5px;
+        }
+    }
+    h4 {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 360px) {
+    .header {
+        height: $height - 50px;
+        .header-box {
+            height: $height - 50px;
+        }
+        h4 {
+            font-size: 0.6rem;
+        }
+    }
+}

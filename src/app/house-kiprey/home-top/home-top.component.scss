@@ -1,0 +1,58 @@
+.top {
+    // background: green;
+    // width: 100%;
+    
+    padding: 10px;
+    background: rgb(221, 228, 238);
+
+    .top-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        min-height: 200px;
+        // background: rgb(221, 228, 238);
+
+        img {
+            width: 150px;
+        }
+        h4 {
+            padding: 10px;
+            font-size: 1rem;
+        }
+    }
+}
+@media (min-width: 1000px) { // от 1000
+    .top {
+        padding: 50px 300px;
+    }
+}
+@media (max-width: 999px) and (min-width: 650px) { // от 650 до 1000
+    .top {
+        padding: 20px 100px;
+    }
+}
+@media (max-width: 450px) { // до 450
+    .top {
+        .top-box {
+            img {
+                width: 100px;
+            }
+            h4 {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+@media (max-width: 350px) { // до 350
+    .top {        
+        .top-box {
+            img {
+                width: 100px;
+            }
+            h4 {
+                font-size: 0.6rem;
+            }
+        }
+    }
+}
