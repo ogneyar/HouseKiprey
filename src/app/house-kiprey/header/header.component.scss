@@ -10,9 +10,12 @@ $width2: 2rem;
     width: $width1 + rem-to-px($width2); // -> 132px
 }
 
+$color-red: #e63946; 
+$color-beige: #f1faee;
+$color-ligth-blue: #a8dadc;
+$color-blue: #457b9d; 
+$color-dark-blue: #1d3557;
 
-$color-blue: rgb(62, 107, 167); 
-$color-ligth-blue :rgb(178, 198, 218);
 $border: 2px;
 $height: 150px - $border; // 150px - 2px border
 $margin-side: 20px;
@@ -24,7 +27,7 @@ $margin-side: 20px;
     width: 100%;
     // height: 200px;
     height: $height;
-    background: $color-ligth-blue;
+    // background: $color-dark-blue;
     
 
     .header-box {
@@ -34,7 +37,9 @@ $margin-side: 20px;
         width: 100%;
         height: $height;
         border-bottom: $border solid $color-blue;
-        background: $color-ligth-blue;
+        background: $color-dark-blue;
+        // color: $color-beige;
+        color: $color-ligth-blue;
 
         display: flex;
         // flex-direction: row;
@@ -67,7 +72,7 @@ $margin-side: 20px;
             }
             .header-box-center {
                 h1 {
-                    color: $color-blue;
+                    // color: $color-blue;
                 }
             }
             .header-box-right {

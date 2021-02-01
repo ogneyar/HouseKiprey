@@ -1,5 +1,13 @@
+
+$color-red: #e63946; 
+$color-beige: #f1faee;
+$color-ligth-blue: #a8dadc;
+$color-blue: #457b9d; 
+$color-dark-blue: #1d3557;
+
 .co-op {
-    background: rgb(248, 247, 255);
+    background: $color-blue;
+    color: $color-beige;
     .co-op-box {
         display: flex;
         flex-direction: column;
@@ -19,6 +27,7 @@
             a {
                 font-size: 1.8rem;
                 padding: 10px;
+                color: $color-ligth-blue;
             }
         }
         

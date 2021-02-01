@@ -1,5 +1,12 @@
+
+$color-red: #e63946; 
+$color-beige: #f1faee;
+$color-ligth-blue: #a8dadc;
+$color-blue: #457b9d; 
+$color-dark-blue: #1d3557;
+
 .about {
-    background: rgb(229, 226, 255);
+    background: $color-beige;
     // width: 100%;
     
     padding: 10px;
