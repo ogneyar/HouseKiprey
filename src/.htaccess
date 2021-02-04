@@ -1,0 +1,5 @@
+RewriteEngine On
+Redirect 301 /reviews /
+Redirect 301 /benefits /
+Redirect 301 /positive /
+Redirect 301 /how-to /

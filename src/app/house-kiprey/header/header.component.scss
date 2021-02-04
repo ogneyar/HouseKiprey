@@ -138,7 +138,7 @@ $margin-side: 20px;
         .menu-box {
             z-index: 11;
             background: $color-ligth-blue;
-            width: 250px;
+            width: 300px;
             height: 400px;
             position: fixed;
             // top: 70px;
@@ -196,17 +196,5 @@ $margin-side: 20px;
     }
     .header:hover .menu {
         // top: 70px;
-    }
-}
-
-@media (max-width: 360px) {
-    .header {
-        height: $height - 50px;
-        .header-box {
-            height: $height - 50px;
-        }
-        h4 {
-            font-size: 0.6rem;
-        }
     }
 }
