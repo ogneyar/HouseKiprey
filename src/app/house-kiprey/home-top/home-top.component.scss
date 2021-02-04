@@ -12,6 +12,8 @@ $color-dark-blue: #1d3557;
     padding: 10px;
     background: $color-beige;
     color: $color-dark-blue;
+    display: flex;
+    height: 700px;
 
     .top-box {
         display: flex;
@@ -38,10 +40,17 @@ $color-dark-blue: #1d3557;
 @media (max-width: 999px) and (min-width: 650px) { // от 650 до 1000
     .top {
         padding: 20px 100px;
+        height: 500px;
+    }
+}
+@media (max-width: 649px) and (min-width: 451px) { // от 650 до 1000
+    .top {
+        height: 450px;
     }
 }
 @media (max-width: 450px) { // до 450
     .top {
+        height: 400px;
         .top-box {
             img {
                 width: 100px;
@@ -53,7 +62,8 @@ $color-dark-blue: #1d3557;
     }
 }
 @media (max-width: 350px) { // до 350
-    .top {        
+    .top {
+        height: 300px;
         .top-box {
             img {
                 width: 100px;

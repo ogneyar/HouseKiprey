@@ -1,0 +1,18 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    min-height: calc(100vh - 368px);
+    background: rgb(221, 228, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 700px) {
+    .body {
+        min-height: calc(100vh - 288px);
+    }
+}

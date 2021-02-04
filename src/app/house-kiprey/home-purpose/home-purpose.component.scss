@@ -6,7 +6,11 @@ $color-blue: #457b9d;
 $color-dark-blue: #1d3557;
 
 .purpose{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: $color-ligth-blue;
+    height: 700px;
     .purpose-box {
         display: flex;
         flex-direction: column;

@@ -12,6 +12,10 @@ import { HomeFormComponent } from './house-kiprey/home-form/home-form.component'
 import { HomeAboutComponent } from './house-kiprey/home-about/home-about.component';
 import { HomeCoOpComponent } from './house-kiprey/home-co-op/home-co-op.component';
 import { HomePurposeComponent } from './house-kiprey/home-purpose/home-purpose.component';
+import { ReviewsComponent } from './reviews/reviews.component';
+import { BenefitsComponent } from './benefits/benefits.component';
+import { PositiveComponent } from './positive/positive.component';
+import { HowToComponent } from './how-to/how-to.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { HomePurposeComponent } from './house-kiprey/home-purpose/home-purpose.c
     HomeFormComponent,
     HomeAboutComponent,
     HomeCoOpComponent,
-    HomePurposeComponent
+    HomePurposeComponent,
+    ReviewsComponent,
+    BenefitsComponent,
+    PositiveComponent,
+    HowToComponent
   ],
   imports: [
     BrowserModule,

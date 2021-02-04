@@ -4,20 +4,52 @@
 
         <div class="box">
             <div class="header-box-left">
-                <h4>ВидеоОтзывы Пайщиков</h4>
+                <h4>
+                    <a routerLink="/reviews">ВидеоОтзывы Пайщиков</a>
+                    <!-- <a routerLink="privacy" queryParams="d" fragment="politics" routerLinkActive="activebutton">Политика конфиденциальности</a> -->
+                </h4>
             </div>
             <div class="header-box-center">
-                <h4>Выгоды Пайщиков ПК 🏡Дом Кипрея🌿</h4>
+                <h4>
+                    <a routerLink="/benefits">Выгоды Пайщиков ПК 🏡Дом Кипрея🌿</a>
+                </h4>
             </div>
             <div class="header-box-right">
-                <h4>Плюсы Электронного Пая</h4>
+                <h4>
+                    <a routerLink="/positive">Плюсы Электронного Пая</a>
+                </h4>
             </div>
         </div>
 
         <div class="header-box-down">
-            <h4>🙏 Стать Пайщиком Кооперативная Целевая программа ФСЭП СолнцеГрад☀️🏡</h4>
+            <h4>
+                <a routerLink="/how-to">🙏 Стать Пайщиком Кооперативная Целевая программа ФСЭП СолнцеГрад☀️🏡</a>
+            </h4>
         </div>
 
+    </div>
+    <div class="header-menu">
+        <h1>
+            <a routerLink="/">Дом Кипрея</a>
+        </h1>
+        <img src="assets/img/hamburger.png" alt="hamburger" id="img-menu" (click)="imgMenuOnClick()">
+    </div>
+
+    <div class="menu" id="menu">
+        <div class="menu-fon" id="menu-fon" (click)="fonMenuOnClick()"></div>
+        <div class="menu-box" id="menu-box">
+            <span (click)="fonMenuOnClick()">&times;</span>
+            <div class="menu-url">
+                
+                <a routerLink="/">Главная страница</a>
+                <a routerLink="/reviews">Видео Отзывы</a>
+                <a routerLink="/benefits">Выгоды Пайщиков</a>
+                <a routerLink="/positive">Плюсы Эл. Пая</a>
+                <a routerLink="/how-to">Стать Пайщиком</a>
+               
+            </div>
+            
+        </div>
     </div>
     
 </div>

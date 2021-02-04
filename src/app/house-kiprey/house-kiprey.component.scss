@@ -11,3 +11,8 @@
     min-height: calc(100vh - 350px);
     background: rgb(221, 228, 238);
 }
+@media (max-width: 700px) {
+    .body {
+        min-height: calc(100vh - 270px);
+    }
+}

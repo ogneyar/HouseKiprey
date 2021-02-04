@@ -9,12 +9,19 @@ $color-dark-blue: #1d3557;
     height: 200px;
     background: $color-dark-blue;
     padding: 10px;
+    // display: flex;
+    // flex-direction: row;
     h1 {
         margin: auto;
     }
     a {
-        padding: 20px;
+        display: flex;
+        padding: 8px 20px;
         font-size: 1.5rem;
-        color: $color-ligth-blue;
+        // color: $color-ligth-blue;
+    }
+    a:first-child {
+        padding-bottom: 30px;
+        // border-bottom: 1px solid;
     }
 }

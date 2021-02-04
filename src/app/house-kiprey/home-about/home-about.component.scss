@@ -6,7 +6,9 @@ $color-blue: #457b9d;
 $color-dark-blue: #1d3557;
 
 .about {
+    display: flex;
     background: $color-beige;
+    height: 700px;
     // width: 100%;
     
     padding: 10px;

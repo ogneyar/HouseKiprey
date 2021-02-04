@@ -22,12 +22,14 @@ body {
   a,
   a:visited,
   a:hover {
-    color: #1976d2;
+    // color: #1976d2;
+    color: $color-ligth-blue;
     text-decoration: none;
   }
   
   a:hover {
-    color: #125699;
+    // color: #125699;
+    opacity: 0.5;
   }
   
   .routes {

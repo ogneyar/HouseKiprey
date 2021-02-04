@@ -6,8 +6,12 @@ $color-blue: #457b9d;
 $color-dark-blue: #1d3557;
 
 .co-op {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: $color-blue;
     color: $color-beige;
+    height: 700px;
     .co-op-box {
         display: flex;
         flex-direction: column;
