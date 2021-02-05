@@ -23,8 +23,13 @@ export class HeaderComponent implements OnInit {
     let menuBox = document.getElementById("menu-box")
     let menuFon = document.getElementById("menu-fon")
     // console.log(menu);
-    menuBox.style.top = "70px";
-    menuFon.style.display = "block";
+    if (menuFon.style.display == "block") {
+      menuBox.style.top = "-400px";
+      menuFon.style.display = "none";
+    }else {
+      menuBox.style.top = "70px";
+      menuFon.style.display = "block";
+    }
   }
 
   fonMenuOnClick() {

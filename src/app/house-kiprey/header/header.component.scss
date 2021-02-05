@@ -54,27 +54,28 @@ $margin-side: 20px;
         
         .box {
             display: flex;
-            
-            width: 100%;
+            flex-direction: column-reverse;
+            // width: 100%;
             // margin: auto;
             margin: 10px 0;
             div {
-                // flex-grow: 1;
-                margin: auto;
-                // flex: 1 1 auto;
-                // text-align: center;
+                
+                // margin: auto;
+               
+                text-align: center;
             }
             .header-box-left {
-                margin-left: $margin-side;
+                margin: $margin-side;
                 
             }
             .header-box-center {
+                margin: $margin-side;
                 h1 {
                     // color: $color-blue;
                 }
             }
             .header-box-right {
-                margin-right: $margin-side;
+                margin: $margin-side;
             }
         }
         .header-box-down {
@@ -92,7 +93,7 @@ $margin-side: 20px;
         }
     }
     h4 {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .header-menu {
