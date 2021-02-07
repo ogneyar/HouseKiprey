@@ -11,7 +11,9 @@ $color-dark-blue: #1d3557;
     align-items: center;
     background: $color-blue;
     color: $color-beige;
-    height: 700px;
+    min-height: 700px;
+    padding: 30px 10px;
+
     .co-op-box {
         display: flex;
         flex-direction: column;
@@ -21,7 +23,13 @@ $color-dark-blue: #1d3557;
         min-height: 200px;
         padding: 20px 10px;
 
+        h1 {
+            text-align: center;
+            padding: 50px 10px;
+        }
+
         .co-op-box-head {
+            padding: 20px;
             text-align: center;
             h4 {
                 padding: 10px;
