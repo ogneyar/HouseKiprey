@@ -18,7 +18,7 @@ $color-dark-blue: #1d3557;
 
 $border: 2px;
 $height: 150px - $border; // 150px - 2px border
-$margin-side: 20px;
+$margin-side: 5px;
 
 .header {
     margin: 0;
@@ -54,7 +54,7 @@ $margin-side: 20px;
         
         .box {
             display: flex;
-            flex-direction: column-reverse;
+            flex-direction: column;
             // width: 100%;
             // margin: auto;
             margin: 10px 0;

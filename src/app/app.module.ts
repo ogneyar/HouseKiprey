@@ -16,6 +16,7 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import { BenefitsComponent } from './benefits/benefits.component';
 import { PositiveComponent } from './positive/positive.component';
 import { HowToComponent } from './how-to/how-to.component';
+import { TestsComponent } from './tests/tests.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HowToComponent } from './how-to/how-to.component';
     ReviewsComponent,
     BenefitsComponent,
     PositiveComponent,
-    HowToComponent
+    HowToComponent,
+    TestsComponent
   ],
   imports: [
     BrowserModule,

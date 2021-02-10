@@ -19,6 +19,8 @@ $color-dark-blue: #1d3557;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        padding: 10px;
         
         min-height: 200px;
         // background: rgb(221, 228, 238);
@@ -34,11 +36,29 @@ $color-dark-blue: #1d3557;
 }
 @media (min-width: 1000px) { // от 1000
     .top {
+        .top-box {
+            img {
+                width: 300px;
+            }
+            h4 {                
+                font-size: 1.5rem;
+                padding: 30px;
+            }
+        }
         padding: 50px 300px;
     }
 }
 @media (max-width: 999px) and (min-width: 650px) { // от 650 до 1000
     .top {
+        .top-box {
+            img {
+                width: 200px;
+            }
+            h4 {                
+                font-size: 1.2rem;
+                padding: 20px;
+            }
+        }
         padding: 20px 100px;
         height: 500px;
     }

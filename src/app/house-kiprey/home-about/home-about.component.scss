@@ -37,13 +37,22 @@ $color-dark-blue: #1d3557;
         padding: 50px 300px;
     }
 }
-@media (max-width: 999px) and (min-width: 650px) { // от 650 до 1000
+@media (max-width: 999px) { // от 650 до 1000
     .about {
+        height: 600px;
         padding: 20px 100px;
+    }
+}
+@media (max-width: 650px) { // от 650 до 1000
+    .about {
+        height: 500px;
+        padding: 20px 50px;
     }
 }
 @media (max-width: 450px) { // до 450
     .about {
+        height: 500px;
+        padding: 20px 20px;
         .about-box {
             img {
                 width: 100px;
@@ -56,6 +65,7 @@ $color-dark-blue: #1d3557;
 }
 @media (max-width: 350px) { // до 350
     .about {
+        padding: 20px 10px;
         .about-box {
             img {
                 width: 100px;

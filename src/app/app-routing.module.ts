@@ -6,6 +6,7 @@ import { HowToComponent } from './how-to/how-to.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PositiveComponent } from './positive/positive.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { TestsComponent } from './tests/tests.component';
 
 const routes: Routes = [
   {path: '', component: HouseKipreyComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'benefits', component: BenefitsComponent},
   {path: 'positive', component: PositiveComponent},
   {path: 'how-to', component: HowToComponent},
+  {path: 'tests', component: TestsComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
