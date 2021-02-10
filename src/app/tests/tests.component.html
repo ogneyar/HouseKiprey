@@ -1,8 +1,20 @@
 <app-header></app-header>
 
 <div class="body">
+    <!-- <h1>Тесты</h1> -->
 
-    <h1>Тесты</h1>
+
+<div class="panel">
+    <div class="header">
+      <p (click)="expand()">Toggle panel</p>
+    </div>
+  
+    <div class="content" [@expandedPanel]="state">
+      <h1>Title</h1>
+  
+      <p>Expanded panel</p>
+    </div>
+</div>
 
 </div>
 

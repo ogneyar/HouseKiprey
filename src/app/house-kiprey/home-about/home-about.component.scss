@@ -32,15 +32,34 @@ $color-dark-blue: #1d3557;
         }
     }
 }
+
 @media (min-width: 1000px) { // от 1000
     .about {
+        .about-box {
+            img {
+                width: 300px;
+            }
+            h4 {                
+                font-size: 1.5rem;
+                padding: 30px;
+            }
+        }
         padding: 50px 300px;
     }
 }
 @media (max-width: 999px) { // от 650 до 1000
     .about {
-        height: 600px;
+        .about-box {
+            img {
+                width: 200px;
+            }
+            h4 {                
+                font-size: 1.2rem;
+                padding: 20px;
+            }
+        }
         padding: 20px 100px;
+        height: 500px;
     }
 }
 @media (max-width: 650px) { // от 650 до 1000
@@ -51,27 +70,28 @@ $color-dark-blue: #1d3557;
 }
 @media (max-width: 450px) { // до 450
     .about {
-        height: 500px;
+        height: 400px;
         padding: 20px 20px;
         .about-box {
             img {
                 width: 100px;
             }
             h4 {
-                font-size: 0.8rem;
+                // font-size: 0.8rem;
             }
         }
     }
 }
 @media (max-width: 350px) { // до 350
     .about {
+        height: 300px;
         padding: 20px 10px;
         .about-box {
             img {
                 width: 100px;
             }
             h4 {
-                font-size: 0.6rem;
+                // font-size: 0.6rem;
             }
         }
     }
