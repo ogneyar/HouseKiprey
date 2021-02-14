@@ -11,6 +11,9 @@ $color-dark-blue: #1d3557;
     align-items: center;
     background: $color-ligth-blue;
     height: 700px;
+
+    padding: 10px;
+    
     .purpose-box {
         display: flex;
         flex-direction: column;
