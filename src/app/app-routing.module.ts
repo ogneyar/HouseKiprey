@@ -17,6 +17,7 @@ const routes: Routes = [
   {path: 'positive', component: PositiveComponent},
   {path: 'how-to', component: HowToComponent},
   {path: 'tests', component: TestsComponent},
+
   {path: '**', component: PageNotFoundComponent}
 ];
 
