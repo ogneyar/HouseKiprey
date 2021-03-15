@@ -15,6 +15,9 @@ include_once 'myBotApi/Variables.php';
 // подключение всех основных функций
 include_once 'function.php';
 
+// Если пришла ссылка типа t.me//..?start=123456789
+if (strpos($text, "/start ")!==false) $text = str_replace ("/start ", "", $text);
+
 //------------------------------
 // подключение основного модуля
 include_once 'bot.php';
