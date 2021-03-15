@@ -20,14 +20,49 @@ switch ($text) {
     case "Старт":
     case "старт":
         if ($chat_type=='private') _старт();
-        break;
+    break;
 
     case "/help":
     case "помощь":
     case "Помощь":
         if ($chat_type=='private') _help();
-        _help();
-        break;
+    break;
+    
+    case $main_buttons[0]:
+        _заказать_продукты();
+    break;
+
+    case $main_buttons[1]:
+        _заказать_продукты();
+    break;
+
+    case $main_buttons[2]:
+        _заказать_продукты();
+    break;
+
+    case $main_buttons[3]:
+        _заказать_продукты();
+    break;
+
+    case $main_buttons[4]:
+        _заказать_продукты();
+    break;
+
+    case $main_buttons[5]:
+        _заказать_продукты();
+    break;
+
+    case $main_buttons[6]:
+        _заказать_продукты();
+    break;
+
+    case $main_buttons[7]:
+        _заказать_продукты();
+    break;
+
+    case $main_buttons[8]:
+        _заказать_продукты();
+    break;
 
 }
 
