@@ -32,7 +32,7 @@
  *
  * sendPhoto
  *
- * sendVideo
+ * sendVideo - 478
  *
  * sendDocument
  *

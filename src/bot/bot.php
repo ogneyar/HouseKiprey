@@ -27,6 +27,11 @@ switch ($text) {
     case "Помощь":
         if ($chat_type=='private') _help();
     break;
+
+    case "/eket":
+    case "ЭКЭТ":
+        _ЭКЭТ();
+    break;
     
     case $main_buttons[0]:
         _заказать_продукты();
@@ -63,6 +68,7 @@ switch ($text) {
     case $main_buttons[8]:
         _заказать_продукты();
     break;
+
 
 }
 
