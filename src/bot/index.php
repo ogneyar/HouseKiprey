@@ -7,27 +7,22 @@ include_once 'conect.php';
 
 // Создаем объект бота
 $bot = new Bot($bot_token);
-$id_bota = strstr($bot_token, ':', true);	
+$id_bota = strstr($bot_token, ':', true);
 
-	
-// ПОДКЛЮЧЕНИЕ ВСЕХ ОСНОВНЫХ ПЕРЕМЕННЫХ
-include 'myBotApi/Variables.php';
-	
-	
-if ($text == "/start"||$text == "s"||$text == "S"||$text == "с"||$text == "С"||$text == "c"||$text == "C"||$text == "Старт"||$text == "старт") {
-	if ($chat_type=='private') {
-		_старт();  			
-	}	
-}
+// подключение всех основных переменных
+include_once 'myBotApi/Variables.php';
 
-// функция старта бота 
-function _старт() {		
-	global $bot, $chat_id, $callback_from_first_name, $from_first_name, $HideKeyboard;
-    if (!$callback_from_first_name) $callback_from_first_name = $from_first_name;
-	$bot->sendMessage($chat_id, "Добро пожаловать, *".$callback_from_first_name."*!", "markdown", $HideKeyboard);		
+// подключение всех основных функций
+include_once 'function.php';
 
-}
+// Если пришла ссылка типа t.me//..?start=123456789
+if (strpos($text, "/start ")!==false) $text = str_replace ("/start ", "", $text);
 
+//------------------------------
+// подключение основного модуля
+include_once 'bot.php';
+//------------------------------
 
-exit('ok'); //Обязательно возвращаем "ok", чтобы телеграмм не подумал, что запрос не дошёл
+// обязательно возвращаем "ok", чтобы телеграмм не подумал, что запрос не дошёл
+exit('ok'); 
 ?>
