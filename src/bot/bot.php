@@ -28,6 +28,11 @@ switch ($text) {
         if ($chat_type=='private') _help();
     break;
 
+    case "/eko":
+    case "ЭКО":
+        _ЭКЭТ();
+    break;
+
     case "/eket":
     case "ЭКЭТ":
         _ЭКЭТ();

@@ -36,7 +36,7 @@ function _help() {
     if (!$callback_from_first_name) $callback_from_first_name = $from_first_name;
 	$sms = "*Бог в помощь!*";
     $sms .= "\n\n";
-	$sms .= "Список команд: \n/eket\n/help";
+	$sms .= "Список команд: \n/eko\n/eket\n/help";
 	$sms .= "\n\n";
     $sms .= $start_text;
 	$bot->sendMessage($chat_id, $sms, "markdown");
@@ -57,6 +57,15 @@ function _ЭКЭТ() {
 	global $bot, $chat_id, $callback_from_first_name, $from_first_name;
     if (!$callback_from_first_name) $callback_from_first_name = $from_first_name;
 	$url = "https://домкипрея.рус/assets/video/eket.mp4";
+	$caption = "СоТворец и Друг 🌞так дерЖАТЬ 🤝🌞и позитива 🌞🤗🏡🍋поднаЖАТЬ🌞🏡🍋🤝🍏🤝🍉🌰ПРАВИльный сайт https://rusineko.ru нажимай и реально на экп 🏡Дом Кипрея🌿 ЭКОлогию нашего общего🏡 ЭКОдома🌳🌏🌲🌍🌳🌎🌲🌈☀️Планеты Земля уЛУЧшай🌞🏡🤝";
+	$bot->sendVideo($chat_id, $url, $caption);
+}
+
+// функция ответа на команду ЭКЭТ
+function _ЭКО() {
+	global $bot, $chat_id, $callback_from_first_name, $from_first_name;
+    if (!$callback_from_first_name) $callback_from_first_name = $from_first_name;
+	$url = "https://домкипрея.рус/assets/video/eko.mp4";
 	$caption = "СоТворец и Друг 🌞так дерЖАТЬ 🤝🌞и позитива 🌞🤗🏡🍋поднаЖАТЬ🌞🏡🍋🤝🍏🤝🍉🌰ПРАВИльный сайт https://rusineko.ru нажимай и реально на экп 🏡Дом Кипрея🌿 ЭКОлогию нашего общего🏡 ЭКОдома🌳🌏🌲🌍🌳🌎🌲🌈☀️Планеты Земля уЛУЧшай🌞🏡🤝";
 	$bot->sendVideo($chat_id, $url, $caption);
 }
