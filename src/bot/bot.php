@@ -32,11 +32,6 @@ switch ($text) {
     case "ЭКО":
         _ЭКО();
     break;
-
-    case "/eket":
-    case "ЭКЭТ":
-        _ЭКЭТ();
-    break;
     
     case $main_buttons[0]:
         _заказать_продукты();

@@ -2,10 +2,12 @@
 // Обрабатываем пришедшие данные
 $data = $bot->init('php://input');
 
-// Вывод на печать JSON файла пришедшего от бота, в группу тестирования
-if ($OtladkaBota == 'да') $bot->sendMessage($test_group, $bot->PrintArray($data)); 
+// $OtladkaBota = 'да';
 
-//echo "ok";
+// Вывод на печать JSON файла пришедшего от бота, в группу тестирования
+if ($OtladkaBota == 'да') $bot->sendMessage($master, $bot->PrintArray($data)); 
+
+// echo "ok";
 
 $update_id = $data['update_id'];
 
