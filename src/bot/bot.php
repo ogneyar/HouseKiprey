@@ -30,7 +30,7 @@ switch ($text) {
 
     case "/eko":
     case "ЭКО":
-        _ЭКЭТ();
+        _ЭКО();
     break;
 
     case "/eket":

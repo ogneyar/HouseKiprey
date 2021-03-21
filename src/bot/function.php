@@ -61,7 +61,7 @@ function _ЭКЭТ() {
 	$bot->sendVideo($chat_id, $url, $caption);
 }
 
-// функция ответа на команду ЭКЭТ
+// функция ответа на команду ЭКО
 function _ЭКО() {
 	global $bot, $chat_id, $callback_from_first_name, $from_first_name;
     if (!$callback_from_first_name) $callback_from_first_name = $from_first_name;
