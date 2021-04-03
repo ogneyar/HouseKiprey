@@ -1,1 +1,1 @@
-ng build
+npm run build
