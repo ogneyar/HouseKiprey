@@ -1,5 +1,5 @@
 const express = require('express');
-const	port = process.env.PORT || 80;
+const	port = process.env.PORT || 4200;
 	
 express().use(express.static('dist'))
     .get('*', (req, res) => res.sendFile(__dirname + '/dist/index.html'))
