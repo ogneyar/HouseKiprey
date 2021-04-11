@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./consultant.component.scss']
 })
 export class ConsultantComponent implements OnInit {
+  
+  socket = null;
 
   constructor() { 
     this.WebSocket();
@@ -32,31 +34,31 @@ export class ConsultantComponent implements OnInit {
   }
 
   WebSocket() {
-    let socket;
+    // let socket;
     try {
 
-      socket = new WebSocket('wss://consultant-mod.herokuapp.com/')
+      this.socket = new WebSocket('wss://consultant-mod.herokuapp.com/')
       // canvasState.setSocket(socket)
       // canvasState.setSessionId(params.id)
-      socket.onopen = () => {
+      this.socket.onopen = () => {
         console.log("Подключение установлено")
-        if (socket) {
-          socket.send(JSON.stringify({
-            method: 'connection',
-            id: "params.id",
-            username: "canvasState.username"
-          }))
-        }
+        
+        this.socket.send(JSON.stringify({
+          method: 'connection',
+          id: "params.id",
+          username: "canvasState.username"
+        }))
+        
       }
-      socket.onmessage = (event) => {
+      this.socket.onmessage = (event) => {
         let msg = JSON.parse(event.data)
         // eslint-disable-next-line
         switch (msg.method) {
           case 'connection':
             console.log(`Пользователь ${msg.username} присоединился`);
             break
-          case 'response':
-            this.MessageHandler(msg.response)
+          case 'send':
+            this.MessageHandler(msg)
             break
         }
       }
@@ -69,6 +71,14 @@ export class ConsultantComponent implements OnInit {
 
   MessageHandler(msg) {
     console.log(msg);
+  }
+
+  SendMessage() {
+    this.socket.send(JSON.stringify({
+      method: 'send',
+      id: "unknown",
+      username: "Ogneyar"
+    }))
   }
 
 }
