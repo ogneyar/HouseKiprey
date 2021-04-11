@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgModel } from '@angular/forms';
 import { environment } from '../../../environments/environment';
 
 @Component({
@@ -74,12 +73,16 @@ export class ConsultantComponent implements OnInit {
     
   }
 
-  SendMessage(text) {
+  // SendMessage(text) {
+  SendMessage() {
+
+    // console.log(text);
+
     this.socket.send(JSON.stringify({
       method: 'send',
       id: this.id,
       username: "client",
-      text
+      text: "text"
     }))
 
     let dialog = document.getElementById("dialog");

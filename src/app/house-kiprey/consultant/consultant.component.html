@@ -16,11 +16,13 @@
     <div class="consultant-form" id="consultant-form">
 
         <div class="consultant-form__input">
-            <textarea name="input" id="input" cols="30" rows="10" [(ngModel)]="message"></textarea>
+            <textarea name="input" id="input" cols="30" rows="10"></textarea>
+            <!-- <textarea name="input" id="input" cols="30" rows="10" [(ngModel)]="message"></textarea> -->
         </div>
 
         <div class="consultant-form__button">
-            <button (click)="SendMessage(message);message=''">Отправить</button>
+            <button (click)="SendMessage()">Отправить</button>
+            <!-- <button (click)="SendMessage(message);message=''">Отправить</button> -->
         </div>
 
         <div class="consultant-form__close" (click)="close()">
