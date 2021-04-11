@@ -1,0 +1,124 @@
+
+$color-red: #e63946; 
+$color-beige: #f1faee;
+$color-ligth-blue: #a8dadc;
+$color-blue: #457b9d; 
+$color-dark-blue: #1d3557;
+
+.consultant {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    text-align: right;
+    z-index: 9999;
+    
+    &__image {
+        img {
+            width: 80px;
+            border-radius: 100%;
+        }
+    }
+
+    &__title {
+        position: fixed;
+        bottom: 15px;
+        right: 20px;
+        background-color: $color-beige;
+        color: $color-blue;
+        text-align: center;
+        border-radius: 10px;
+        visibility: hidden;
+        display: none;
+        opacity: 0;
+        transition: opacity 400ms ease-in;
+        padding: 5px 10px;
+    }
+
+    
+
+    &__dialog {
+        position: fixed;
+        bottom: 100px;
+        right: 110px;
+        width: 125px;
+        text-align: left;
+        padding: 5px 10px;
+        background-color: $color-beige;
+        color: $color-blue;
+        border-radius: 10px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 80%;
+            margin-left: -5px;
+            border-width: 8px;
+            border-style: solid;
+            border-color: $color-beige transparent transparent transparent ;
+        }
+
+        visibility: hidden;
+        display: none;
+        opacity: 0;
+        transition: opacity 400ms ease-in;
+    }
+
+    &-form {
+        visibility: hidden;
+        display: none;
+        opacity: 0;
+        transition: opacity 400ms ease-in;
+
+        &__input {
+            position: fixed;
+            bottom: 150px;
+            right: 20px;
+            textarea {
+                padding: 5px 10px;
+                border-radius: 10px;
+                background-color: $color-beige;
+                color: $color-blue;
+                white-space: pre-line;
+                resize: none;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        &__button {
+            position: fixed;
+            bottom: 125px;
+            right: 20px;
+            button {
+                padding: 5px 10px;
+                background-color: $color-beige;
+                color: $color-blue;
+                border-radius: 10px;
+                border-width: 1px;
+            }
+        }
+        &__close {
+            position: fixed;
+            bottom: 300px;
+            right: 10px;
+            text-align: center;
+            padding: 4px 8px;
+            background-color: $color-beige;
+            color: $color-blue;
+            border-radius: 100%;
+            border: 1px solid $color-blue;            
+        }
+    }
+   
+    &:hover &__title,
+    // &:hover &__input,
+    // &:hover &__button,
+    // &:hover &__close,
+    &:hover &__dialog {
+        visibility: visible;
+        display: block;
+        opacity: 0.9;
+    }
+}
