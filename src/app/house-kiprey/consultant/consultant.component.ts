@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-consultant',
@@ -9,13 +10,11 @@ export class ConsultantComponent implements OnInit {
   
   socket = null;
 
-  constructor() { 
+  constructor() {
     this.WebSocket();
   }
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void { }
   
   open() {
     let consultantForm = document.getElementById("consultant-form");
@@ -34,12 +33,19 @@ export class ConsultantComponent implements OnInit {
   }
 
   WebSocket() {
-    // let socket;
+    
     try {
+      this.socket = new WebSocket(environment.ws_url)
 
-      this.socket = new WebSocket('wss://consultant-mod.herokuapp.com/')
+      console.log(environment.ws_url);
+      
+
+      // this.socket = new WebSocket('ws://localhost/')
+      // this.socket = new WebSocket('wss://house-kiprey.herokuapp.com/')
+
       // canvasState.setSocket(socket)
       // canvasState.setSessionId(params.id)
+
       this.socket.onopen = () => {
         console.log("Подключение установлено")
         
