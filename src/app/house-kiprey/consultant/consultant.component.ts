@@ -75,6 +75,9 @@ export class ConsultantComponent implements OnInit {
   }
 
   SendMessage() {
+
+    console.log("Кнопка нажата");
+
     this.socket.send(JSON.stringify({
       method: 'send',
       id: "unknown",
