@@ -45,8 +45,8 @@ export class ConsultantComponent implements OnInit {
         
         this.socket.send(JSON.stringify({
           method: 'connection',
-          id: "params.id",
-          username: "canvasState.username"
+          id: "unknown",
+          username: "username"
         }))
         
       }
