@@ -35,7 +35,7 @@ export class ConsultantComponent implements OnInit {
     let socket;
     try {
 
-      socket = new WebSocket('ws://consultant.herokuapp.com/')
+      socket = new WebSocket('ws://consultant-mod.herokuapp.com/')
       // canvasState.setSocket(socket)
       // canvasState.setSessionId(params.id)
       socket.onopen = () => {
