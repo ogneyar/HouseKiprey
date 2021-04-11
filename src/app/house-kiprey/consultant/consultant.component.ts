@@ -10,6 +10,7 @@ export class ConsultantComponent implements OnInit {
   
   socket = null;
   id = `f${(+ new Date()).toString(16)}`;
+  message = "";
 
   constructor() {
     this.WebSocket();
