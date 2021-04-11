@@ -16,6 +16,7 @@ $color-dark-blue: #1d3557;
         img {
             width: 80px;
             border-radius: 100%;
+            cursor: pointer;
         }
     }
 
@@ -98,6 +99,7 @@ $color-dark-blue: #1d3557;
             }
         }
         &__close {
+            cursor: pointer;
             position: fixed;
             bottom: 300px;
             right: 10px;
@@ -111,9 +113,6 @@ $color-dark-blue: #1d3557;
     }
    
     &:hover &__title,
-    // &:hover &__input,
-    // &:hover &__button,
-    // &:hover &__close,
     &:hover &__dialog {
         visibility: visible;
         display: block;
