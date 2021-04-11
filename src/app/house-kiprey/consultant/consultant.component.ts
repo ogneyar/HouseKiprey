@@ -74,8 +74,8 @@ export class ConsultantComponent implements OnInit {
     
   }
 
-  // SendMessage(text) {
-  SendMessage() {
+  SendMessage(text) {
+  // SendMessage() {
 
     // console.log(text);
 
