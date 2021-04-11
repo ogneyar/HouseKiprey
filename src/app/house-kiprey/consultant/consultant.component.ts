@@ -58,7 +58,8 @@ export class ConsultantComponent implements OnInit {
             console.log(`Пользователь ${msg.username} присоединился`);
             break
           case 'send':
-            this.MessageHandler(msg)
+            // this.MessageHandler(msg)
+            console.log(msg);
             break
         }
       }
