@@ -32,31 +32,39 @@ export class ConsultantComponent implements OnInit {
   }
 
   WebSocket() {
-    const socket = new WebSocket('ws://consultant.herokuapp.com/')
-    // canvasState.setSocket(socket)
-    // canvasState.setSessionId(params.id)
+    let socket;
+    try {
 
-    socket.onopen = () => {
+      socket = new WebSocket('ws://consultant.herokuapp.com/')
+      // canvasState.setSocket(socket)
+      // canvasState.setSessionId(params.id)
+      socket.onopen = () => {
         console.log("Подключение установлено")
-        socket.send(JSON.stringify({
+        if (socket) {
+          socket.send(JSON.stringify({
             method: 'connection',
             id: "params.id",
             username: "canvasState.username"
-        }))
-    }
-    socket.onmessage = (event) => {
+          }))
+        }
+      }
+      socket.onmessage = (event) => {
         let msg = JSON.parse(event.data)
         // eslint-disable-next-line
         switch (msg.method) {
-            case 'connection':
-                console.log(`Пользователь ${msg.username} присоединился`);
-                break
-            case 'draw':
-              this.MessageHandler(msg)
-                break
-
+          case 'connection':
+            console.log(`Пользователь ${msg.username} присоединился`);
+            break
+          case 'draw':
+            this.MessageHandler(msg)
+            break
         }
+      }
+
+    }catch(e) {
+      console.log("catch error");
     }
+    
   }
 
   MessageHandler(msg) {
