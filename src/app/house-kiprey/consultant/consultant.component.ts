@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgModel } from '@angular/forms';
 import { environment } from '../../../environments/environment';
 
 @Component({
@@ -9,6 +10,7 @@ import { environment } from '../../../environments/environment';
 export class ConsultantComponent implements OnInit {
   
   socket = null;
+  id = `f${(+ new Date()).toString(16)}`;
 
   constructor() {
     this.WebSocket();
@@ -37,22 +39,18 @@ export class ConsultantComponent implements OnInit {
     try {
       this.socket = new WebSocket(environment.ws_url)
 
-      console.log(environment.ws_url);
+      // console.log(environment.ws_url);
       
-
       // this.socket = new WebSocket('ws://localhost/')
       // this.socket = new WebSocket('wss://house-kiprey.herokuapp.com/')
-
-      // canvasState.setSocket(socket)
-      // canvasState.setSessionId(params.id)
 
       this.socket.onopen = () => {
         console.log("Подключение установлено")
         
         this.socket.send(JSON.stringify({
           method: 'connection',
-          id: "unknown",
-          username: "username"
+          id: this.id,
+          username: "unknown"
         }))
         
       }
@@ -62,10 +60,10 @@ export class ConsultantComponent implements OnInit {
         switch (msg.method) {
           case 'connection':
             console.log(`Пользователь ${msg.username} присоединился`);
+            console.log(`Его id: ${msg.id}`);
             break
           case 'send':
-            // this.MessageHandler(msg)
-            console.log(msg);
+            console.log(`${msg.username} пишет: ${msg.text}`);
             break
         }
       }
@@ -76,19 +74,28 @@ export class ConsultantComponent implements OnInit {
     
   }
 
-  MessageHandler(msg) {
-    console.log(msg);
-  }
-
-  SendMessage() {
-
-    console.log("Кнопка нажата");
-
+  SendMessage(text) {
     this.socket.send(JSON.stringify({
       method: 'send',
-      id: "unknown",
-      username: "Ogneyar"
+      id: this.id,
+      username: "client",
+      text
     }))
+
+    let dialog = document.getElementById("dialog");
+    let consultant__dialog = document.getElementById("consultant__dialog");
+
+    consultant__dialog.style.visibility = "visible";
+    consultant__dialog.style.display = "block";
+    consultant__dialog.style.opacity = "0.9";
+
+    dialog.innerHTML = "Сообщение отправлено. Ожидайте..."
+    setTimeout(() => {
+      dialog.innerHTML = "Здравствуйте, чем могу помочь?"
+      consultant__dialog.style.visibility = "hidden";
+      consultant__dialog.style.display = "none";
+      consultant__dialog.style.opacity = "0";
+    },2000)
   }
 
 }

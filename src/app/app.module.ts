@@ -20,6 +20,7 @@ import { HowToComponent } from './how-to/how-to.component';
 import { TestsComponent } from './tests/tests.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ConsultantComponent } from './house-kiprey/consultant/consultant.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ConsultantComponent } from './house-kiprey/consultant/consultant.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
