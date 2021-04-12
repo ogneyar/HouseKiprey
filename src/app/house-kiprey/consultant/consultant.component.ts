@@ -39,7 +39,7 @@ export class ConsultantComponent implements OnInit {
     try {
       this.socket = new WebSocket(environment.ws_url)
 
-      // console.log(environment.ws_url);
+      console.log(environment.ws_url);
       
       // this.socket = new WebSocket('ws://localhost/')
       // this.socket = new WebSocket('wss://house-kiprey.herokuapp.com/')
@@ -75,15 +75,12 @@ export class ConsultantComponent implements OnInit {
   }
 
   SendMessage(text) {
-  // SendMessage() {
-
-    // console.log(text);
 
     this.socket.send(JSON.stringify({
       method: 'send',
       id: this.id,
       username: "client",
-      text: "text"
+      text
     }))
 
     let dialog = document.getElementById("dialog");
