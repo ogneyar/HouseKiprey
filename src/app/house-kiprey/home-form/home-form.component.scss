@@ -11,32 +11,80 @@ $color-dark-blue: #1d3557;
     justify-content: center;
     align-items: center;
     
-    padding: 20px 100px;
+    padding: 50px 70px 20px 70px;
     background: $color-ligth-blue;
     height: 700px;
     div {
         padding: 30px 0;
         font-size: 1.5rem;
     }
-   
     .form-head, .form-phone, .form-insta {
         text-align: center;
         margin-bottom: 20px;
     }
-    
+
+    .form-phone {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .form-phone_image {
+            img {
+                width: 200px;
+            }
+        }
+        .form-phone_text {
+            padding: 20px;
+        }
+        
+    }
 }
-@media (max-width: 700px) {
+@media (max-width: 720px) {
     .form {
-        height: 500px;
+        height: 550px;
         padding: 20px 20px;
         div {
-            padding: 30px 0;
+            padding: 10px 0;
             font-size: 1rem;
         }
+
+        .form-head, .form-phone, .form-insta {
+            margin-bottom: 10px;
+        }
+
+        .form-phone {
+            .form-phone_image {
+                img {
+                    width: 150px;
+                }
+            }
+            .form-phone_text {
+                padding: 10px;
+            }
+        }
+        
     }
 }
 @media (max-width: 350px) {
     .form {
-        padding: 10px 10px;
+        height: 500px;
+        padding: 5px 5px;
+
+        .form-head, .form-phone, .form-insta {
+            margin-bottom: 5px;
+        }
+        .form-phone {
+
+            .form-phone_image {
+                img {
+                    width: 120px;
+                }
+            }
+            .form-phone_text {
+                padding: 5px;
+            }
+
+        }
     }
+    
 }
