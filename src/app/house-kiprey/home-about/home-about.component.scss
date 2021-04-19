@@ -7,13 +7,11 @@ $color-dark-blue: #1d3557;
 
 .about {
     display: flex;
+    flex-direction: column;
     background: $color-beige;
-    height: 700px;
-    // width: 100%;
+    // height: 1100px;
     
-    padding: 10px;
-
-    // background: rgb(221, 228, 238);
+    padding: 50px 200px;
 
     .about-box {
         display: flex;
@@ -21,34 +19,37 @@ $color-dark-blue: #1d3557;
         align-items: center;
         
         min-height: 200px;
-        // background: rgb(221, 228, 238);
 
         img {
-            width: 150px;
+            width: 300px;
         }
         h4 {
-            padding: 10px;
-            font-size: 1rem;
+            font-size: 1.5rem;
+            padding: 30px;
+        }
+    }
+
+    &_mission {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        margin:20px;
+
+        h4, p {
+            margin:20px;
+        }        
+        h4 {
+            text-align: center;
+            font-size: 1.5rem;
         }
     }
 }
 
-@media (min-width: 1000px) { // от 1000
+@media (max-width: 1000px) { // от 650 до 1000
     .about {
-        .about-box {
-            img {
-                width: 300px;
-            }
-            h4 {                
-                font-size: 1.5rem;
-                padding: 30px;
-            }
-        }
-        padding: 50px 300px;
-    }
-}
-@media (max-width: 999px) { // от 650 до 1000
-    .about {
+        padding: 20px 100px;
+        // height: 700px;
+
         .about-box {
             img {
                 width: 200px;
@@ -57,42 +58,74 @@ $color-dark-blue: #1d3557;
                 font-size: 1.2rem;
                 padding: 20px;
             }
+        }        
+
+        &_mission {
+            padding: 20px;
+            margin: 15px;
+
+            h4, p {
+                margin: 15px;
+            }        
+            h4 {
+                font-size: 1.2rem;
+            }
         }
-        padding: 20px 100px;
-        height: 500px;
     }
 }
 @media (max-width: 650px) { // от 650 до 1000
     .about {
-        height: 500px;
+        // height: 600px;
         padding: 20px 50px;
+
+        &_mission {
+            padding: 15px;
+            margin: 10px;
+
+            h4, p {
+                margin: 10px;
+            }        
+        }
     }
 }
 @media (max-width: 450px) { // до 450
     .about {
-        height: 400px;
+        // height: 500px;
         padding: 20px 20px;
         .about-box {
             img {
                 width: 100px;
-            }
-            h4 {
-                // font-size: 0.8rem;
-            }
+            }            
+        }
+        
+        &_mission {
+            padding: 10px;
+            margin: 5px;
+
+            h4, p {
+                margin: 5px;
+            }   
         }
     }
 }
 @media (max-width: 350px) { // до 350
     .about {
-        height: 300px;
+        // height: 400px;
         padding: 20px 10px;
         .about-box {
             img {
                 width: 100px;
             }
-            h4 {
-                // font-size: 0.6rem;
-            }
+        }
+        
+        &_mission {
+            padding: 5px;
+            margin: 0;
+
+            margin: 5px;
+            h4, p {
+                margin: 0;
+            }   
         }
     }
 }
