@@ -24,7 +24,7 @@ app.ws('/', (ws, req) => {
 
 app.get('*', (req, res) => res.sendFile(__dirname + '/dist/index.html'))
 
-app.listen(PORT, () => console.log(`Starting server. Listening on ${ PORT }`))
+app.listen(PORT, () => console.log(`Starting server. Listening on http://localhost:${ PORT }`))
 
 const broadcastConnection = (ws, msg) => {
     aWss.clients.forEach(client => {
